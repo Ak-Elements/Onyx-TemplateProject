@@ -1,0 +1,13 @@
+set(TARGET_PUBLIC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/public/gameproject)
+set(TARGET_PRIVATE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/private/gameproject)
+
+set(TARGET_PUBLIC_SOURCES
+	${TARGET_PUBLIC_PATH}/gameproject.h
+    
+
+)
+
+set(TARGET_PRIVATE_SOURCES
+	${TARGET_PRIVATE_PATH}/entrypoint.cpp
+    ${TARGET_PRIVATE_PATH}/gameproject.cpp
+)
