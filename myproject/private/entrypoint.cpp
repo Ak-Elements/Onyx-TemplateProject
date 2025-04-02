@@ -1,6 +1,6 @@
-#include <gameproject/gameproject.h>
-
 #include <onyx/application/application.h>
+
+#include <gameproject.h>
 
 #include <editor/editormodule.h>
 
@@ -17,6 +17,7 @@
 
 #include <onyx/nodegraph/nodegraphmodule.h>
 #include <onyx/volume/volumesystem.h>
+
 
 namespace Onyx::Application
 {
@@ -57,7 +58,7 @@ namespace Onyx::Application
         window.Show();
         graphicsSystem.GetGraphicsApi().SetRenderGraph(mainRenderGraph);
 
-        application.AddSystem<Irrlicht::IrrlichtSystem>();
+        application.AddSystem<Game::GameSystem>();
     }
 
     void OnApplicationShutdown(Application& /*application*/ )

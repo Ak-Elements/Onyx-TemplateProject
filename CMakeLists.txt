@@ -14,7 +14,8 @@ set(LIB_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-project ("GameProject" VERSION ${LIB_VERSION} LANGUAGES CXX)
+set(ONYX_GAME_PROJECT_NAME "myproject")
+project (${ONYX_GAME_PROJECT_NAME} VERSION ${LIB_VERSION} LANGUAGES CXX)
 
 include(FetchContent)
 include(cmakepackagemanager)
@@ -26,7 +27,7 @@ CPMAddPackage(
 )
 
 # Include sub-projects.
-add_subdirectory(code)
+add_subdirectory(${ONYX_GAME_PROJECT_NAME})
 
 if(MSVC AND ONYX_BUILD_EDITOR)
 	#### Set as startup project ####

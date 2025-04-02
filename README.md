@@ -1,9 +1,19 @@
 # Onyx Engine Installation Guide
 
 ## Introduction
-Onyx is a Vulkan-based C++ engine designed for high-performance graphics rendering. This guide outlines the requirements and step-by-step instructions for building Onyx on Windows.
+This is the default template for an empty project using Onyx.
 
 ---
+
+## Set project name
+By default the template for this default project is called 'myproject' you can change this by opening the root CMakeLists.txt and change the value of the ONYX_GAME_PROJECT_NAME variable.
+
+```bash
+set(ONYX_GAME_PROJECT_NAME "myproject") <- Change
+set(ONYX_GAME_PROJECT_NAME "mynewproject")
+```
+
+Additionally you should rename the `myproject` folder in the root to match the new project name.
 
 ## Requirements & Dependencies
 To successfully build and run Onyx, ensure the following software and tools are installed:
@@ -46,8 +56,8 @@ You can download the source code directly from the GitHub repository as a ZIP fi
 If you prefer to use Git, clone the repository to your local system with the following command:
 
 ```bash
-git clone <repository-url> Onyx
-cd Onyx
+git clone <repository-url> MyGame
+cd MyGame
 ```
 > **_TIP:_** If you are unfamiliar with the command line, you can use one of the Git clients for your platform.
 > Refer to the platform-specific build instructions for further details on those.

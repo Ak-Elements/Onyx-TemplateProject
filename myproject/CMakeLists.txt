@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.28)
 
 #### Target ####
-set(CURRENT_TARGET Game)
+set(CURRENT_TARGET ${ONYX_GAME_PROJECT_NAME})
 include(${CMAKE_CURRENT_SOURCE_DIR}/dependencies.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/source_definitions.cmake)
 
