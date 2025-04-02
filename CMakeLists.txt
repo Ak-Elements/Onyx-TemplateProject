@@ -23,7 +23,7 @@ include(cmakepackagemanager)
 CPMAddPackage(
     NAME Onyx
     GITHUB_REPOSITORY Ak-Elements/Onyx
-    GIT_TAG release
+    GIT_TAG main
 )
 
 # Include sub-projects.
