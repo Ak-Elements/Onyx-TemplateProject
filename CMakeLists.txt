@@ -20,11 +20,8 @@ project (${ONYX_GAME_PROJECT_NAME} VERSION ${LIB_VERSION} LANGUAGES CXX)
 include(FetchContent)
 include(cmakepackagemanager)
 
-CPMAddPackage(
-    NAME Onyx
-    GITHUB_REPOSITORY Ak-Elements/Onyx
-    GIT_TAG main
-)
+# Add Onyx
+add_subdirectory(onyx)
 
 # Include sub-projects.
 add_subdirectory(${ONYX_GAME_PROJECT_NAME})
