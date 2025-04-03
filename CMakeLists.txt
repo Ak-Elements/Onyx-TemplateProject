@@ -21,6 +21,7 @@ include(FetchContent)
 include(cmakepackagemanager)
 
 # Add Onyx
+set(ONYX_TARGETS_FOLDER "onyx")
 add_subdirectory(onyx)
 
 # Include sub-projects.
