@@ -24,6 +24,8 @@ CPMAddPackage(
     NAME Onyx
     GITHUB_REPOSITORY Ak-Elements/Onyx
     GIT_TAG main
+    OPTIONS
+    "ONYX_TARGETS_FOLDER onyx"
 )
 
 # Include sub-projects.
