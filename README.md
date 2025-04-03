@@ -5,16 +5,6 @@ This is the default template for an empty project using Onyx.
 
 ---
 
-## Set project name
-By default the template for this default project is called 'myproject' you can change this by opening the root CMakeLists.txt and change the value of the ONYX_GAME_PROJECT_NAME variable.
-
-```bash
-set(ONYX_GAME_PROJECT_NAME "myproject") <- Change
-set(ONYX_GAME_PROJECT_NAME "mynewproject")
-```
-
-Additionally you should rename the `myproject` folder in the root to match the new project name.
-
 ## Requirements & Dependencies
 To successfully build and run Onyx, ensure the following software and tools are installed:
 
@@ -68,6 +58,16 @@ Follow the steps to configure, and build the Onyx engine depending on your platf
 - [Windows Build Instructions](docs/windows_build.md)
 - [Linux Build Instructions](docs/linux_build.md)
 - [macOS Build Instructions](docs/macos-build.md)
+
+## Set project name
+By default the template for this default project is called 'myproject' you can change this by opening the root CMakeLists.txt and change the value of the ONYX_GAME_PROJECT_NAME variable.
+
+```bash
+set(ONYX_GAME_PROJECT_NAME "myproject") <- Change
+set(ONYX_GAME_PROJECT_NAME "mynewproject")
+```
+
+Additionally you should rename the `myproject` folder in the root to match the new project name.
 
 ## Additional Notes
 
