@@ -2,14 +2,9 @@
 
 #include <onyx/engine/enginesystem.h>
 
-namespace Onyx::Ui
+namespace Game
 {
-    class ImGuiSystem;
-}
-
-namespace Irrlicht
-{
-    class IrrlichtSystem : public Onyx::IEngineSystem
+    class GameSystem : public Onyx::IEngineSystem
     {
     public:
         void Init();
