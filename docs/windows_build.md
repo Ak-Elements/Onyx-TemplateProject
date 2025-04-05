@@ -83,7 +83,7 @@ If you are using Visual Studio, you can run the project directly by pressing **F
    The working directory is already configured correctly by CMake, so no additional setup is required.
 
 #### Running directly from the Build Folder
-If you choose to run the Onyx executable directly from the build output directory (e.g., `build/code/Debug`), you must set the working directory correctly for the engine to locate necessary resources and assets.
+If you choose to run the Onyx executable directly from the build output directory (e.g., `build/myproject/Debug`), you must set the working directory correctly for the engine to locate necessary resources and assets.
 
 The working directory must be set to the **project root directory**. Here’s how to ensure the working directory is set properly:
 
