@@ -56,7 +56,7 @@ You can download the source code directly from the GitHub repository as a ZIP fi
 If you prefer to use Git, clone the repository to your local system with the following command:
 
 ```bash
-git clone <repository-url> MyGame
+git clone --recurse-submodules https://github.com/Ak-Elements/Onyx-DefaultProject.git MyGame
 cd MyGame
 ```
 > **_TIP:_** If you are unfamiliar with the command line, you can use one of the Git clients for your platform.
