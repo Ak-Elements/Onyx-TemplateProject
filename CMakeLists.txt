@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.28)
 
-option(project_name "Project name" "project_name")
+set(ONYX_GAME_PROJECT_NAME "myproject" CACHE STRING "Project Name")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
