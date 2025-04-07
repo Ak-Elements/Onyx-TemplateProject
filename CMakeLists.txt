@@ -17,6 +17,13 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(ONYX_GAME_PROJECT_NAME "myproject")
 project (${ONYX_GAME_PROJECT_NAME} VERSION ${LIB_VERSION} LANGUAGES CXX)
 
+set( PROJECT_COMPILE_OPTIONS
+	$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>: -Wall -Wnocomment -fno-rtti>
+	$<$<CXX_COMPILER_ID:MSVC>:/W4 /WX /Zc:__cplusplus /Zi /GR- >)
+set( PROJECT_LINK_OPTIONS
+	$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>: >
+	$<$<CXX_COMPILER_ID:MSVC>:/ignore:4099>)
+
 include(FetchContent)
 include(cmakepackagemanager)
 
