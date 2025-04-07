@@ -30,6 +30,9 @@ do
     echo "Renamed $filename"
 done
 
+# replace @PROJECT_NAME@ in generate projects
+sed -i "s/@PROJECT_NAME@/$name/g" "generate_projects.ps1"
+
 mv project_name $name
 
 # This command runs only once on GHA!
