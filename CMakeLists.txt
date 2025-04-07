@@ -41,5 +41,5 @@ add_subdirectory(${project_name})
 
 if(MSVC AND ONYX_BUILD_EDITOR)
 	#### Set as startup project ####
-	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${ONYX_GAME_PROJECT_NAME})
+	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${project_name})
 endif()
