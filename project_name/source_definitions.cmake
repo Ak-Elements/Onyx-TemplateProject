@@ -7,5 +7,5 @@ set(TARGET_PUBLIC_SOURCES
 
 set(TARGET_PRIVATE_SOURCES
 	${TARGET_PRIVATE_PATH}/entrypoint.cpp
-    ${TARGET_PRIVATE_PATH}/gameproject.cpp
+	${TARGET_PRIVATE_PATH}/gameproject.cpp
 )
