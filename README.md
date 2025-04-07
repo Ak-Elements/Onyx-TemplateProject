@@ -3,17 +3,19 @@
 ## Introduction
 This is the default template for an empty project using Onyx.
 
----
+### HOW TO USE THIS TEMPLATE
 
-## Set project name
-By default the template for this default project is called 'myproject' you can change this by opening the root CMakeLists.txt and change the value of the ONYX_GAME_PROJECT_NAME variable.
+> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)** feature.
 
-```bash
-set(ONYX_GAME_PROJECT_NAME "myproject") <- Change
-set(ONYX_GAME_PROJECT_NAME "mynewproject")
-```
+1. Click on **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)**
+3. Give a name to your project  
+   (e.g. `my_awesome_project` recommendation is to use all lowercase and underscores separation for repo names.)
+3. Wait until the first run of CI finishes  
+   (Github Actions will process the template and commit to your new repo)
+4. Read the Onyx install guide to check all requirements & dependencies. https://github.com/Ak-Elements/Onyx
+5. Clone your new project and happy coding!
 
-Additionally you should rename the `myproject` folder in the root to match the new project name.
+> **NOTE**: **WAIT** until first CI run on github actions before cloning your new project.
 
 ## Requirements & Dependencies
 To successfully build and run Onyx, ensure the following software and tools are installed:
@@ -41,34 +43,6 @@ To successfully build and run Onyx, ensure the following software and tools are 
          - Install GCC 11+ from the [GCC Installation Guide](https://gcc.gnu.org/install/).
          - Windows users can install GCC via [WSL](https://code.visualstudio.com/docs/cpp/config-wsl) for a Linux-like environment.
 
----
-
-## Obtain the Source Code
-
-### Option 1: Download the ZIP File
-You can download the source code directly from the GitHub repository as a ZIP file:
-
-1. Go to the repository's GitHub page.
-2. Click the **Code** button, then select **Download ZIP**.
-3. Extract the downloaded ZIP file to a directory of your choice.
-
-### Option 2: Clone the Repository with Git
-If you prefer to use Git, clone the repository to your local system with the following command:
-
-```bash
-git clone --recurse-submodules https://github.com/Ak-Elements/Onyx-DefaultProject.git MyGame
-cd MyGame
-```
-> **_TIP:_** If you are unfamiliar with the command line, you can use one of the Git clients for your platform.
-> Refer to the platform-specific build instructions for further details on those.
-
-## Build Instructions
-Follow the steps to configure, and build the Onyx engine depending on your platform.
-
-- [Windows Build Instructions](docs/windows_build.md)
-- [Linux Build Instructions](docs/linux_build.md)
-- [macOS Build Instructions](docs/macos-build.md)
-
 ## Additional Notes
 
 -   A GPU with Vulkan support is required.
@@ -80,3 +54,5 @@ Required Notice: Copyright AkElements
 
 This repository is licensed under the PolyForm Noncommercial License 1.0.0
 https://polyformproject.org/licenses/noncommercial/1.0.0/
+
+For questions regarding the license or if you would like to have a more permissive license feel free to contact me. (akelements.dev@gmail.com)
