@@ -5,7 +5,7 @@ This is the default template for an empty project using Onyx.
 
 ### HOW TO USE THIS TEMPLATE
 
-> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/rochacbruno/python-project-template/generate)** feature.
+> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)** feature.
 
 1. Click on **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)**
 3. Give a name to your project  
