@@ -3,6 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.28)
 
+option(project_name "project_name")
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
 set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
@@ -14,8 +16,7 @@ set(LIB_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-set(ONYX_GAME_PROJECT_NAME "myproject")
-project (${ONYX_GAME_PROJECT_NAME} VERSION ${LIB_VERSION} LANGUAGES CXX)
+project (${project_name} VERSION ${LIB_VERSION} LANGUAGES CXX)
 
 set( PROJECT_COMPILE_OPTIONS
 	$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>: -Wall -Wnocomment -fno-rtti>
@@ -36,7 +37,7 @@ CPMAddPackage(
 )
 
 # Include sub-projects.
-add_subdirectory(${ONYX_GAME_PROJECT_NAME})
+add_subdirectory(${project_name})
 
 if(MSVC AND ONYX_BUILD_EDITOR)
 	#### Set as startup project ####
