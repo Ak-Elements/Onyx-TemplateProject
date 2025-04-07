@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.28)
 
-option(project_name "project_name")
+option(project_name "Project name" "project_name")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
@@ -28,9 +28,13 @@ set( PROJECT_LINK_OPTIONS
 include(FetchContent)
 include(cmakepackagemanager)
 
-# Add Onyx
-set(ONYX_TARGETS_FOLDER "onyx")
-add_subdirectory(onyx)
+CPMAddPackage(
+    NAME Onyx
+    GITHUB_REPOSITORY Ak-Elements/Onyx
+    GIT_TAG main
+    OPTIONS
+    "ONYX_TARGETS_FOLDER onyx"
+)
 
 # Include sub-projects.
 add_subdirectory(${project_name})
