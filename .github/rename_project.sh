@@ -31,7 +31,9 @@ do
 done
 
 # replace @PROJECT_NAME@ in generate projects
-sed -i "s/@PROJECT_NAME@/$name/g" "generate_projects.ps1"
+sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.ps1"
+sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.bat"
+sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.sh"
 
 mv project_name $name
 
