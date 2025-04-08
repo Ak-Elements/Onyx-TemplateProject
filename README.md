@@ -1,5 +1,3 @@
-# Onyx Engine Installation Guide
-
 ## Introduction
 This is the default template for an empty project using Onyx.
 
