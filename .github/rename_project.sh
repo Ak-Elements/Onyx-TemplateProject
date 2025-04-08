@@ -16,10 +16,10 @@ echo "Description: $description";
 
 echo "Renaming project..."
 
-original_author="Ak-Elements"
-original_name="onyx_templateproject"
-original_urlname="Onyx-TemplateProject"
-original_description="Awesome onyx_templateproject created by Ak-Elements"
+original_author="author_name"
+original_name="project_name"
+original_urlname="project_urlname"
+original_description="project_description"
 # for filename in $(find . -name "*.*") 
 for filename in $(git ls-files) 
 do
@@ -35,7 +35,7 @@ sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.ps1"
 sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.bat"
 sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.sh"
 
-mv onyx_templateproject $name
+mv project_name $name
 
 # This command runs only once on GHA!
 rm -rf .github/template.yml

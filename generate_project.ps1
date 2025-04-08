@@ -2,7 +2,7 @@
 $sourceDir = $PSScriptRoot  # The directory where the script is located (assuming it's the source root)
 $buildDir = Join-Path $sourceDir "build"  # The output directory for the VS solution
 $defaultGenerator = "Visual Studio 17 2022"  # Default generator
-$projectName = "onyx_templateproject"
+$projectName = "@PROJECT_NAME@"
 
 # Check if cmake is installed
 if (-not (Get-Command cmake -ErrorAction SilentlyContinue)) {
@@ -48,7 +48,7 @@ if (!(Test-Path $buildDir)) {
 
 # Run CMake
 Write-Host "Running CMake to generate Visual Studio 2022 solution..."
-cmake -S "`"$sourceDir`"" -B "`"$buildDir`"" -G "`"$generator`"" -D "ONYX_BUILD_EDITOR=ON" -D "onyx_templateproject=$projectName"
+cmake -S "`"$sourceDir`"" -B "`"$buildDir`"" -G "`"$generator`"" -D "ONYX_BUILD_EDITOR=ON" -D "project_name=$projectName"
 
 # Check if CMake succeeded
 if ($LASTEXITCODE -eq 0) {

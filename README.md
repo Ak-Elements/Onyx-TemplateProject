@@ -42,8 +42,8 @@ To successfully build and run Onyx, ensure the following software and tools are 
          - Windows users can install GCC via [WSL](https://code.visualstudio.com/docs/cpp/config-wsl) for a Linux-like environment.
 
 ## Set project name
- By default the template for this default project is called 'onyx_templateproject' and is renamed by github once you create a new repository from it using the **[Use this template](https://github.com/Ak-Elements/Onyx-TemplateProject/generate)** feature.
- If you decided to download the repository manually you have to change those default names yourself by opening all 3 generate_projects scripts and replace `@PROJECT_NAME@` with the name of your project as well as renaming the folder `onyx_templateproject` to the name you chose.
+ By default the template for this default project is called 'project_name' and is renamed by github once you create a new repository from it using the **[Use this template](https://github.com/Ak-Elements/Onyx-TemplateProject/generate)** feature.
+ If you decided to download the repository manually you have to change those default names yourself by opening all 3 generate_projects scripts and replace `@PROJECT_NAME@` with the name of your project as well as renaming the folder `project_name` to the name you chose.
 
 > It is highly recommended to use the template from GitHub instead of manually downloading the source.
 

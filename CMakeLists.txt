@@ -16,7 +16,7 @@ set(LIB_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-project (${onyx_templateproject} VERSION ${LIB_VERSION} LANGUAGES CXX)
+project (${project_name} VERSION ${LIB_VERSION} LANGUAGES CXX)
 
 set( PROJECT_COMPILE_OPTIONS
 	$<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>: -Wall -Wnocomment -fno-rtti>
@@ -37,9 +37,9 @@ CPMAddPackage(
 )
 
 # Include sub-projects.
-add_subdirectory(${onyx_templateproject})
+add_subdirectory(${project_name})
 
 if(MSVC AND ONYX_BUILD_EDITOR)
 	#### Set as startup project ####
-	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${onyx_templateproject})
+	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${project_name})
 endif()

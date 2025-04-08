@@ -5,7 +5,7 @@ REM Define variables
 set "sourceDir=%~dp0"
 set "buildDir=%sourceDir%build"
 set "defaultGenerator=Visual Studio 17 2022"
-set "projectName=onyx_templateproject"
+set "projectName=@PROJECT_NAME@"
 
 REM Check if cmake is installed
 where cmake >nul 2>&1
@@ -40,7 +40,7 @@ if not defined generator (
 
 REM Run CMake
 echo Running CMake to generate Visual Studio 2022 solution...
-cmake -S %sourceDir% -B %buildDir% -G "%generator%" -D "ONYX_BUILD_EDITOR=ON" -D "onyx_templateproject=%projectName%"
+cmake -S %sourceDir% -B %buildDir% -G "%generator%" -D "ONYX_BUILD_EDITOR=ON" -D "project_name=%projectName%"
 
 REM Check if CMake succeeded
 if %errorlevel% equ 0 (
