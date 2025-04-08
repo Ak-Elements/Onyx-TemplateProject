@@ -3,7 +3,7 @@
 # Define variables
 sourceDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 buildDir="$sourceDir/build"
-projectName="@PROJECT_NAME@"
+projectName="onyx_templateproject"
 
 # Check if cmake is installed
 if ! command -v cmake &> /dev/null; then
@@ -55,7 +55,7 @@ mkdir -p "$buildDir"
 
 # Run CMake
 echo "Running CMake with generator: $generator"
-cmake -S "$sourceDir" -B "$buildDir" -G "$generator" -D "ONYX_BUILD_EDITOR=ON" -D "project_name=$projectName"
+cmake -S "$sourceDir" -B "$buildDir" -G "$generator" -D "ONYX_BUILD_EDITOR=ON" -D "onyx_templateproject=$projectName"
 
 # Check if CMake succeeded
 if [ $? -eq 0 ]; then
