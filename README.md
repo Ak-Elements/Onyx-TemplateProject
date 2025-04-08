@@ -3,9 +3,9 @@ This is the default template for an empty project using Onyx.
 
 ### HOW TO USE THIS TEMPLATE
 
-> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)** feature.
+> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/Ak-Elements/Onyx-TemplateProject/generate)** feature.
 
-1. Click on **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)**
+1. Click on **[Use this template](https://github.com/Ak-Elements/Onyx-TemplateProject/generate)**
 3. Give a name to your project  
    (e.g. `my_awesome_project` recommendation is to use all lowercase and underscores separation for repo names.)
 3. Wait until the first run of CI finishes  
@@ -42,7 +42,7 @@ To successfully build and run Onyx, ensure the following software and tools are 
          - Windows users can install GCC via [WSL](https://code.visualstudio.com/docs/cpp/config-wsl) for a Linux-like environment.
 
 ## Set project name
- By default the template for this default project is called 'project_name' and is renamed by github once you create a new repository from it using the **[Use this template](https://github.com/Ak-Elements/Onyx-DefaultProject/generate)** feature.
+ By default the template for this default project is called 'project_name' and is renamed by github once you create a new repository from it using the **[Use this template](https://github.com/Ak-Elements/Onyx-TemplateProject/generate)** feature.
  If you decided to download the repository manually you have to change those default names yourself by opening all 3 generate_projects scripts and replace `@PROJECT_NAME@` with the name of your project as well as renaming the folder `project_name` to the name you chose.
 
 > It is highly recommended to use the template from GitHub instead of manually downloading the source.
