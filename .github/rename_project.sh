@@ -38,4 +38,4 @@ sed -i "s/@PROJECT_NAME@/$name/g" "generate_project.sh"
 mv project_name $name
 
 # This command runs only once on GHA!
-rm -rf .github/template.yml
+rm -rf .github
