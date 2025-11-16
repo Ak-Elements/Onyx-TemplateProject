@@ -1,0 +1,65 @@
+{
+    "name":"test",
+    "mountpoints":
+    [
+        { "name":"engine", "path":"build/_deps/onyx-src/data" },
+        { "name":"project", "path":"data" },
+        { "name":"tmp", "path":"tmp" }
+    ],
+    "graphics":
+    {
+        "api":"Vulkan"
+    },
+    "window":
+    {
+        "size":[1600,900],
+        "mode":"Windowed"
+    },
+    "modules":
+    [
+        { 
+            "id": "8c9ea120",
+            "string": "Onyx::Assets::AssetModule"
+        },
+        { 
+            "id": "d6c1b5f5",
+            "string": "Onyx::Graphics::WindowSystem"
+        },
+        { 
+            "id": "1484e8d4",
+            "string": "Onyx::Graphics::GraphicsSystem"
+        },
+        { 
+            "id": "1ee5fbc5",
+            "string": "Onyx::Input::InputModule"
+        },
+        { 
+            "id": "34bcbf03",
+            "string": "Onyx::Input::InputActionModule"
+        },
+        { 
+            "id": "6f1591f9",
+            "string": "Onyx::Localization::LocalizationModule"
+        },
+        { 
+            "id": "1bc77835",
+            "string": "Onyx::Ui::UiModule"
+        },
+        { 
+            "id": "127bbd68",
+            "string": "Onyx::Ui::ImGuiModule"
+        },
+        { 
+            "id": "17cd4be9",
+            "string": "Onyx::GameCore::GameCoreModule"
+        },
+        { 
+            "id": "1d6bbb55",
+            "string": "Onyx::Volume::VolumeModule"
+        },
+        { 
+            "id": "163ef7a9",
+            "string": "Editor::EditorModule"
+        }
+    ]
+}

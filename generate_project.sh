@@ -55,7 +55,7 @@ mkdir -p "$buildDir"
 
 # Run CMake
 echo "Running CMake with generator: $generator"
-cmake -S "$sourceDir" -B "$buildDir" -G "$generator" -D "ONYX_BUILD_EDITOR=ON" -D "project_name=$projectName"
+cmake -S "$sourceDir" -B "$buildDir" -G "$generator" -D "ONYX_BUILD_EDITOR=ON" -D "projectName=$projectName"
 
 # Check if CMake succeeded
 if [ $? -eq 0 ]; then

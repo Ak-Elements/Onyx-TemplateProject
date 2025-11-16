@@ -4,21 +4,35 @@
 cmake_minimum_required (VERSION 3.28)
 
 #### Target ####
-set(CURRENT_TARGET ${project_name})
+set(CURRENT_TARGET ${projectName})
 include(${CMAKE_CURRENT_SOURCE_DIR}/dependencies.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/source_definitions.cmake)
 
+set(base_directory ${CMAKE_CURRENT_SOURCE_DIR}/public)
+
+onyx_find_engine_modules("${TARGET_PUBLIC_SOURCES}" "${base_directory}" engineModuleClasses engineModuleIncludePaths)
+set_property(GLOBAL APPEND PROPERTY project_engine_module_classes ${engineModuleClasses})
+set_property(GLOBAL APPEND PROPERTY project_engine_module_include_paths ${engineModuleIncludePaths})
+
 add_executable(${CURRENT_TARGET})
 
-target_sources(${CURRENT_TARGET} PUBLIC ${TARGET_PUBLIC_SOURCES})
-target_sources(${CURRENT_TARGET} PRIVATE ${TARGET_PRIVATE_SOURCES})
+if(TARGET_PUBLIC_SOURCES)
+    target_sources(${CURRENT_TARGET} PUBLIC
+        FILE_SET HEADERS
+        BASE_DIRS "${base_directory}"
+        FILES ${TARGET_PUBLIC_SOURCES}
+    )
+    source_group(TREE ${TARGET_PUBLIC_PATH} FILES ${TARGET_PUBLIC_SOURCES})
+endif()
 
-source_group(TREE ${TARGET_PUBLIC_PATH} FILES ${TARGET_PUBLIC_SOURCES})
-source_group(TREE ${TARGET_PRIVATE_PATH} FILES ${TARGET_PRIVATE_SOURCES})
+if(TARGET_PRIVATE_SOURCES)
+    target_sources(${CURRENT_TARGET} PRIVATE ${TARGET_PRIVATE_SOURCES})
+    source_group(TREE ${TARGET_PRIVATE_PATH} FILES ${TARGET_PRIVATE_SOURCES})
+endif()
 
 # set cxx standard and settings
 set_target_properties(${CURRENT_TARGET} PROPERTIES
-    CXX_STANDARD 20
+    CXX_STANDARD 23
     CXX_STANDARD_REQUIRED YES
     CXX_EXTENSIONS NO
     CXX_VISIBILITY_PRESET hidden
@@ -43,7 +57,7 @@ target_link_options(${CURRENT_TARGET} PRIVATE ${PROJECT_LINK_OPTIONS})
 
 #### Includes ####
 target_include_directories(${CURRENT_TARGET} PUBLIC
-    $<BUILD_INTERFACE: ${CMAKE_CURRENT_SOURCE_DIR}/public>
+    $<BUILD_INTERFACE: ${base_directory}>
     $<INSTALL_INTERFACE:include>
 )
 target_include_directories(${CURRENT_TARGET} PRIVATE

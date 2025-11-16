@@ -48,7 +48,7 @@ if (!(Test-Path $buildDir)) {
 
 # Run CMake
 Write-Host "Running CMake to generate Visual Studio 2022 solution..."
-cmake -S "`"$sourceDir`"" -B "`"$buildDir`"" -G "`"$generator`"" -D "ONYX_BUILD_EDITOR=ON" -D "project_name=$projectName"
+cmake -S "`"$sourceDir`"" -B "`"$buildDir`"" -G "`"$generator`"" -D "ONYX_BUILD_EDITOR=ON" -D "projectName=$projectName"
 
 # Check if CMake succeeded
 if ($LASTEXITCODE -eq 0) {
